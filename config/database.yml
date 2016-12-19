@@ -1,13 +1,13 @@
 development:
   adapter: postgresql
-  database: oms_development
+  database: sample_app_development
   encoding: unicode
   username: devuser
   password: devuser
   host: localhost
 test:
   adapter: postgresql
-  database: oms_test<%= ENV['TEST_ENV_NUMBER'] %>
+  database: sample_app_test<%= ENV['TEST_ENV_NUMBER'] %>
   encoding: unicode
   username: devuser
   password: devuser
