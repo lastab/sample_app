@@ -72,7 +72,11 @@ class User < ApplicationRecord
     reset_sent_at < 2.hours.ago
   end
 
-  private
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
+  end
+
+  p private
 
   # Converts email to all lower-case
   def downcase_email
