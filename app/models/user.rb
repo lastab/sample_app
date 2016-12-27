@@ -82,12 +82,7 @@ class User < ApplicationRecord
     reset_sent_at < 2.hours.ago
   end
 
-  def password_reset_expired?
-    reset_sent_at < 2.hours.ago
-  end
-
   # Defines a proto-feed.
-  # See "Following users" for the full implementation.
   def feed
     following_ids = "SELECT followed_id FROM relationships
                      WHERE  follower_id = :user_id"
@@ -122,4 +117,5 @@ class User < ApplicationRecord
     self.activation_token = User.new_token
     self.activation_digest = User.digest(activation_token)
   end
+
 end

@@ -9,6 +9,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
   test "micropost interface" do
     log_in_as(@user)
     get root_path
+    puts  @feed_items.count
     assert_select 'div.pagination'
     #invalid submission
     assert_no_difference 'Micropost.count' do
