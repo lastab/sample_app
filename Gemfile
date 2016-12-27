@@ -31,9 +31,6 @@ gem 'faker', '1.6.6'
 gem 'carrierwave',             '0.11.2'
 gem 'mini_magick',             '4.5.1'
 gem 'fog',                     '1.38.0'
-gem 'carrierwave',             '0.11.2'
-gem 'mini_magick',             '4.5.1'
-gem 'fog',                     '1.38.0'
 gem 'will_paginate',           '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
 
@@ -44,6 +41,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -67,3 +65,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+
