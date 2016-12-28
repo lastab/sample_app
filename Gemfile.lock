@@ -39,6 +39,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
     ansi (1.5.0)
     arel (7.1.4)
     autoprefixer-rails (6.5.4)
@@ -50,12 +52,20 @@ GEM
       will_paginate
     builder (3.2.2)
     byebug (9.0.6)
+    capybara (2.11.0)
+      addressable
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
     carrierwave (0.11.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
+    cliver (0.3.2)
     coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
@@ -257,10 +267,15 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     pg (0.19.0)
+    poltergeist (1.12.0)
+      capybara (~> 2.1)
+      cliver (~> 0.3.1)
+      websocket-driver (>= 0.2.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    public_suffix (2.0.4)
     puma (3.6.2)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -361,6 +376,8 @@ GEM
     websocket-extensions (0.1.2)
     will_paginate (3.1.0)
     xml-simple (1.1.5)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
@@ -371,6 +388,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.2.0)
   bootstrap-will_paginate (= 0.0.10)
   byebug
+  capybara
   carrierwave (= 0.11.2)
   coffee-rails (~> 4.2)
   faker (= 1.6.6)
@@ -383,6 +401,7 @@ DEPENDENCIES
   mini_magick (= 4.5.1)
   minitest-reporters (= 1.1.9)
   pg
+  poltergeist
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   rails-controller-testing (= 0.1.1)
