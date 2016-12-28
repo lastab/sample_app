@@ -20,6 +20,7 @@ describe SessionsController, type: feature do
     fill_in 'session_password', with: ''
     click_button 'Log in'
     expect(current_path).to eq("/login")
+    expect(page).to have_content("Invalid email/password combination")
   end
 
   it "password reset" do
